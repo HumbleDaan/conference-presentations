@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <!-- Visual 3: Zoom out from 30-second windows to daily timeline -->
+  <defs>
+    <style>
+      .cu-cell { fill: #0078D4; stroke: #ffffff; stroke-width: 0.3; }
+      .cu-bar { fill: #0078D4; stroke: #ffffff; stroke-width: 1; }
+      .time-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #605E5C; }
+      .stage-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #323130; font-weight: 600; }
+      .arrow { fill: none; stroke: #605E5C; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#605E5C" />
+    </marker>
+
+    <!-- Pattern for detailed grid -->
+    <pattern id="cu-grid-small" x="0" y="0" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect class="cu-cell" x="0" y="0" width="2" height="2"/>
+    </pattern>
+  </defs>
+
+  <!-- Stage 1: Three 30-second windows side-by-side (detailed) -->
+  <g id="stage-1">
+    <text class="stage-label" x="150" y="20">Stage 1: Three 30-sec windows</text>
+
+    <!-- Window 1 (0-30s) -->
+    <rect x="10" y="40" width="90" height="120" fill="url(#cu-grid-small)"/>
+    <text class="time-label" x="55" y="170" text-anchor="middle">0-30s</text>
+
+    <!-- Window 2 (30-60s) -->
+    <rect x="110" y="40" width="90" height="120" fill="url(#cu-grid-small)"/>
+    <text class="time-label" x="155" y="170" text-anchor="middle">30-60s</text>
+
+    <!-- Window 3 (60-90s) -->
+    <rect x="210" y="40" width="90" height="120" fill="url(#cu-grid-small)"/>
+    <text class="time-label" x="255" y="170" text-anchor="middle">60-90s</text>
+  </g>
+
+  <!-- Arrow to Stage 2 -->
+  <path class="arrow" d="M 330 100 L 380 100"/>
+
+  <!-- Stage 2: More windows, getting smaller -->
+  <g id="stage-2">
+    <text class="stage-label" x="500" y="20">Stage 2: 5-minute view</text>
+
+    <!-- Show 10 windows (5 minutes = 10 x 30-second windows) -->
+    <rect x="410" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="450" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="490" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="530" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="570" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="610" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="650" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="690" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="730" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+    <rect x="770" y="50" width="35" height="100" fill="url(#cu-grid-small)"/>
+
+    <text class="time-label" x="590" y="165" text-anchor="middle">0-5 min</text>
+  </g>
+
+  <!-- Arrow to Stage 3 -->
+  <path class="arrow" d="M 160 200 L 160 250"/>
+
+  <!-- Stage 3: Collapsed to bars (hourly) -->
+  <g id="stage-3">
+    <text class="stage-label" x="180" y="270">Stage 3: 1-hour view (aggregated bars)</text>
+
+    <!-- Show 12 bars representing 12 x 5-minute periods = 1 hour -->
+    <rect class="cu-bar" x="40" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="62" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="84" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="106" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="128" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="150" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="172" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="194" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="216" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="238" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="260" y="290" width="18" height="80"/>
+    <rect class="cu-bar" x="282" y="290" width="18" height="80"/>
+
+    <text class="time-label" x="40" y="385" text-anchor="start">0</text>
+    <text class="time-label" x="161" y="385" text-anchor="middle">30 min</text>
+    <text class="time-label" x="282" y="385" text-anchor="end">60 min</text>
+  </g>
+
+  <!-- Arrow to Stage 4 -->
+  <path class="arrow" d="M 160 400 L 160 450"/>
+
+  <!-- Stage 4: Full 24-hour timeline -->
+  <g id="stage-4">
+    <text class="stage-label" x="500" y="470">Stage 4: 24-hour daily overview</text>
+
+    <!-- Show 24 bars (one per hour, each representing aggregated 5-min smoothing) -->
+    <rect class="cu-bar" x="50" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="95" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="140" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="185" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="230" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="275" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="320" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="365" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="410" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="455" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="500" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="545" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="590" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="635" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="680" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="725" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="770" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="815" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="860" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="905" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="950" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="995" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="1040" y="490" width="42" height="70"/>
+    <rect class="cu-bar" x="1085" y="490" width="42" height="70"/>
+
+    <!-- Time axis labels -->
+    <line x1="50" y1="575" x2="1127" y2="575" stroke="#605E5C" stroke-width="1"/>
+    <text class="time-label" x="50" y="590" text-anchor="start">00:00</text>
+    <text class="time-label" x="321" y="590" text-anchor="middle">06:00</text>
+    <text class="time-label" x="591" y="590" text-anchor="middle">12:00</text>
+    <text class="time-label" x="861" y="590" text-anchor="middle">18:00</text>
+    <text class="time-label" x="1127" y="590" text-anchor="end">24:00</text>
+  </g>
+
+  <!-- Description text -->
+  <text class="time-label" x="600" y="650" text-anchor="middle">Geometric zoom out: 30-sec detail → 5-min segments → hourly bars → full day timeline</text>
+</svg>
