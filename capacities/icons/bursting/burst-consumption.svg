@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 280" width="450" height="280">
+  <!-- Burst Consumption - Shows how burst is used during spikes -->
+
+  <text x="225" y="20" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#323130" text-anchor="middle">Burst Capacity Consumption</text>
+
+  <!-- Left panel: Burst bank before -->
+  <rect x="20" y="40" width="130" height="160" fill="none" stroke="#0D5A4C" stroke-width="1" rx="4"/>
+  <text x="85" y="55" font-family="Segoe UI, sans-serif" font-size="10" fill="#117865" text-anchor="middle" font-weight="600">Before Spike</text>
+
+  <!-- Bank container -->
+  <rect x="35" y="65" width="80" height="80" fill="none" stroke="#117865" stroke-width="2" rx="4"/>
+  <rect x="40" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="60" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="80" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="100" y="120" width="10" height="20" fill="#F2C811" rx="2"/>
+  <rect x="40" y="97" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="60" y="97" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="80" y="97" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="40" y="74" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="60" y="74" width="17" height="20" fill="#F2C811" rx="2"/>
+  <text x="85" y="175" font-family="Segoe UI, sans-serif" font-size="9" fill="#117865" text-anchor="middle">Bank: 90%</text>
+
+  <!-- Center panel: The spike -->
+  <rect x="160" y="40" width="130" height="160" fill="none" stroke="#D13438" stroke-width="1" rx="4"/>
+  <text x="225" y="55" font-family="Segoe UI, sans-serif" font-size="10" fill="#D13438" text-anchor="middle" font-weight="600">Usage Spike</text>
+
+  <!-- Capacity bar showing spike -->
+  <rect x="175" y="70" width="100" height="100" fill="none" stroke="#0D5A4C" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="175" y1="120" x2="275" y2="120" stroke="#0D5A4C" stroke-width="2"/>
+  <text x="280" y="125" font-family="Segoe UI, sans-serif" font-size="8" fill="#0D5A4C">Base</text>
+
+  <!-- Usage spike exceeding base -->
+  <rect x="195" y="125" width="30" height="40" fill="#117865" opacity="0.85" rx="2"/>
+  <rect x="195" y="80" width="30" height="45" fill="#F2C811" opacity="0.85" rx="2"/>
+  <text x="210" y="100" font-family="Segoe UI, sans-serif" font-size="8" fill="#A84D0A" text-anchor="middle">BURST</text>
+
+  <!-- Arrow showing burst consumption -->
+  <path d="M 95 155 Q 145 185 185 95" fill="none" stroke="#F2C811" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="140" y="175" font-family="Segoe UI, sans-serif" font-size="8" fill="#A84D0A">Uses burst</text>
+
+  <!-- Right panel: Burst bank after -->
+  <rect x="300" y="40" width="130" height="160" fill="none" stroke="#0D5A4C" stroke-width="1" rx="4"/>
+  <text x="365" y="55" font-family="Segoe UI, sans-serif" font-size="10" fill="#A84D0A" text-anchor="middle" font-weight="600">After Spike</text>
+
+  <!-- Bank container (depleted) -->
+  <rect x="315" y="65" width="80" height="80" fill="none" stroke="#117865" stroke-width="2" rx="4"/>
+  <rect x="320" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="340" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="360" y="120" width="17" height="20" fill="#F2C811" rx="2"/>
+  <rect x="380" y="120" width="10" height="20" fill="#F2C811" rx="2"/>
+  <rect x="320" y="97" width="17" height="20" fill="#F2C811" rx="2" opacity="0.3"/>
+  <rect x="340" y="97" width="17" height="20" fill="#F2C811" rx="2" opacity="0.3"/>
+
+  <text x="365" y="175" font-family="Segoe UI, sans-serif" font-size="9" fill="#A84D0A" text-anchor="middle">Bank: 40%</text>
+
+  <!-- Arrow between panels -->
+  <path d="M 150 110 L 160 110" fill="none" stroke="#0D5A4C" stroke-width="1.5"/>
+  <path d="M 290 110 L 300 110" fill="none" stroke="#0D5A4C" stroke-width="1.5"/>
+
+  <!-- Bottom explanation -->
+  <rect x="20" y="210" width="410" height="60" fill="#D13438" opacity="0.08" rx="4"/>
+  <text x="225" y="228" font-family="Segoe UI, sans-serif" font-size="10" fill="#323130" text-anchor="middle" font-weight="600">How Burst Consumption Works:</text>
+  <text x="225" y="243" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">1. Operation exceeds base capacity → Draws from burst bank</text>
+  <text x="225" y="256" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">2. Burst bank depletes as excess usage continues</text>
+  <text x="225" y="269" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">3. When bank is empty → Throttling begins (interactive) or jobs queue (background)</text>
+</svg>
