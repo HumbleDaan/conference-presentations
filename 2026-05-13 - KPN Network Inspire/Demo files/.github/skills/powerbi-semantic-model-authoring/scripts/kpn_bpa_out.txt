@@ -1,0 +1,41 @@
+
+Tabular Editor 2.28.0 (build 2.28.9557.26801)
+--------------------------------
+Loading model...
+Running Best Practice Analyzer...
+=================================
+::warning:: Column 'Product'[Weight] violates rule "[Performance] Do not use floating point data types"
+::warning:: Column 'Product'[Unit Cost] violates rule "[Performance] Do not use floating point data types"
+::warning:: Column 'Product'[Unit Price] violates rule "[Performance] Do not use floating point data types"
+::warning:: Column 'Sales'[Unit Price] violates rule "[Performance] Do not use floating point data types"
+::warning:: Column 'Sales'[Net Price] violates rule "[Performance] Do not use floating point data types"
+::warning:: Column 'Sales'[Unit Cost] violates rule "[Performance] Do not use floating point data types"
+Column 'Sales'[Unit Price] violates rule "[Performance] Remove redundant columns in related tables"
+Column 'Sales'[Unit Cost] violates rule "[Performance] Remove redundant columns in related tables"
+::error:: Measure [Total Quantity] violates rule "[Formatting] Provide format string for measures"
+::error:: Measure [Number of orders] violates rule "[Formatting] Provide format string for measures"
+::error:: Measure [Number of Customers] violates rule "[Formatting] Provide format string for measures"
+::error:: Measure [Sales Amount] violates rule "[Formatting] Provide format string for measures"
+::error:: Measure [Sales Growth YOY] violates rule "[Formatting] Provide format string for measures"
+Column 'Customer'[City] violates rule "[Formatting] Add data category for columns"
+Column 'Customer'[Country Code] violates rule "[Formatting] Add data category for columns"
+Column 'Customer'[Country] violates rule "[Formatting] Add data category for columns"
+Column 'Customer'[Continent] violates rule "[Formatting] Add data category for columns"
+Column 'Store'[Country] violates rule "[Formatting] Add data category for columns"
+::warning:: Column 'Customer'[CustomerKey] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Product'[ProductKey] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Store'[StoreKey] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Sales'[Order Date] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Sales'[CustomerKey] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Sales'[StoreKey] violates rule "[Formatting] Hide foreign keys"
+::warning:: Column 'Sales'[ProductKey] violates rule "[Formatting] Hide foreign keys"
+Column 'Customer'[CustomerKey] violates rule "[Formatting] Mark primary keys"
+Column 'Product'[ProductKey] violates rule "[Formatting] Mark primary keys"
+Column 'Store'[StoreKey] violates rule "[Formatting] Mark primary keys"
+::warning:: Column 'Sales'[Order Number] violates rule "[Formatting] Hide fact table columns"
+::warning:: Column 'Sales'[CustomerKey] violates rule "[Formatting] Hide fact table columns"
+::warning:: Column 'Sales'[Quantity] violates rule "[Formatting] Hide fact table columns"
+::warning:: Column 'Sales'[Net Price] violates rule "[Formatting] Hide fact table columns"
+::warning:: Column 'Sales'[Unit Cost] violates rule "[Formatting] Hide fact table columns"
+::warning:: Column 'Date'[MonthName] violates rule "[Formatting] Month (as a string) must be sorted"
+=================================

@@ -1,0 +1,8 @@
+{
+    "fabricStudio.workspaceFilter": "kpn",
+    "chat.useAgentSkills": true,
+    "chat.experimental.useSkillAdherencePrompt": true,
+    "files.exclude": {
+        "powerbi-agentic-plugins": true
+    }
+}
