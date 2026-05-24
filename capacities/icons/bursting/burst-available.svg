@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <!-- Bursting Available - Shows capacity bank concept -->
+
+  <!-- Background -->
+  <defs>
+    <pattern id="gridBurst" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0D5A4C" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="burstGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#117865;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#117865;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="30" width="320" height="170" fill="url(#gridBurst)"/>
+
+  <!-- Base capacity line -->
+  <line x1="40" y1="160" x2="360" y2="160" stroke="#0D5A4C" stroke-width="2"/>
+  <text x="365" y="165" font-family="Segoe UI, sans-serif" font-size="10" fill="#0D5A4C">Base (F64)</text>
+
+  <!-- Burst capacity zone (above base) -->
+  <rect x="40" y="50" width="320" height="110" fill="#117865" opacity="0.1"/>
+  <text x="200" y="100" font-family="Segoe UI, sans-serif" font-size="12" fill="#117865" text-anchor="middle" font-style="italic">Burst Capacity Zone</text>
+  <text x="200" y="115" font-family="Segoe UI, sans-serif" font-size="10" fill="#117865" text-anchor="middle">(Up to 10 minutes accumulated)</text>
+
+  <!-- Current usage bars showing bursting -->
+  <rect x="60" y="140" width="30" height="20" fill="#117865" opacity="0.85"/>
+  <rect x="100" y="130" width="30" height="30" fill="#117865" opacity="0.85"/>
+  <rect x="140" y="80" width="30" height="80" fill="#117865" opacity="0.85"/>
+  <rect x="140" y="50" width="30" height="30" fill="#F2C811" opacity="0.85"/><!-- Burst portion in yellow -->
+  <rect x="180" y="70" width="30" height="90" fill="#117865" opacity="0.85"/>
+  <rect x="180" y="50" width="30" height="20" fill="#F2C811" opacity="0.85"/>
+  <rect x="220" y="150" width="30" height="10" fill="#117865" opacity="0.85"/>
+  <rect x="260" y="135" width="30" height="25" fill="#117865" opacity="0.85"/>
+  <rect x="300" y="145" width="30" height="15" fill="#117865" opacity="0.85"/>
+
+  <!-- Burst indicator arrow -->
+  <path d="M 155 45 L 155 35 L 165 35 L 155 25 L 145 35 L 155 35" fill="#F2C811" stroke="#A84D0A" stroke-width="1"/>
+  <text x="155" y="20" font-family="Segoe UI, sans-serif" font-size="9" fill="#A84D0A" text-anchor="middle">BURST</text>
+
+  <!-- Time axis -->
+  <line x1="40" y1="200" x2="360" y2="200" stroke="#0D5A4C" stroke-width="1"/>
+  <text x="40" y="215" font-family="Segoe UI, sans-serif" font-size="9" fill="#0D5A4C">T</text>
+  <text x="200" y="215" font-family="Segoe UI, sans-serif" font-size="9" fill="#0D5A4C" text-anchor="middle">Time →</text>
+
+  <!-- Legend -->
+  <rect x="50" y="230" width="15" height="10" fill="#117865" opacity="0.85"/>
+  <text x="70" y="239" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">Base Capacity</text>
+  <rect x="170" y="230" width="15" height="10" fill="#F2C811" opacity="0.85"/>
+  <text x="190" y="239" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">Burst Usage</text>
+  <rect x="280" y="230" width="15" height="10" fill="#117865" opacity="0.1" stroke="#117865" stroke-width="1"/>
+  <text x="300" y="239" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">Available Burst</text>
+</svg>

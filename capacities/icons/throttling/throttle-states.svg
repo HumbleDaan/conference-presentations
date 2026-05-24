@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <!-- Throttling States Overview -->
+
+  <text x="250" y="22" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#323130" text-anchor="middle">Throttling States</text>
+
+  <!-- State 1: Healthy (Green) -->
+  <rect x="20" y="40" width="145" height="120" fill="#107C10" opacity="0.08" stroke="#107C10" stroke-width="2" rx="6"/>
+  <text x="92" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">HEALTHY</text>
+
+  <!-- Gauge showing healthy -->
+  <circle cx="92" cy="105" r="30" fill="none" stroke="#0D5A4C" stroke-width="4" opacity="0.2"/>
+  <path d="M 92 105 L 92 80" stroke="#107C10" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="92" cy="105" r="5" fill="#107C10"/>
+  <text x="92" y="148" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">Usage &lt; 100%</text>
+  <text x="92" y="158" font-family="Segoe UI, sans-serif" font-size="8" fill="#107C10" text-anchor="middle">No delays</text>
+
+  <!-- State 2: Warning (Orange) -->
+  <rect x="177" y="40" width="145" height="120" fill="#A84D0A" opacity="0.08" stroke="#A84D0A" stroke-width="2" rx="6"/>
+  <text x="250" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#A84D0A" text-anchor="middle">OVERAGE</text>
+
+  <!-- Gauge showing warning -->
+  <circle cx="250" cy="105" r="30" fill="none" stroke="#0D5A4C" stroke-width="4" opacity="0.2"/>
+  <path d="M 250 105 L 270 90" stroke="#A84D0A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="250" cy="105" r="5" fill="#A84D0A"/>
+  <text x="250" y="148" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">100-120% usage</text>
+  <text x="250" y="158" font-family="Segoe UI, sans-serif" font-size="8" fill="#A84D0A" text-anchor="middle">Using burst bank</text>
+
+  <!-- State 3: Throttled (Red) -->
+  <rect x="335" y="40" width="145" height="120" fill="#D13438" opacity="0.08" stroke="#D13438" stroke-width="2" rx="6"/>
+  <text x="407" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#D13438" text-anchor="middle">THROTTLED</text>
+
+  <!-- Gauge showing throttled -->
+  <circle cx="407" cy="105" r="30" fill="none" stroke="#0D5A4C" stroke-width="4" opacity="0.2"/>
+  <path d="M 407 105 L 432 115" stroke="#D13438" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="407" cy="105" r="5" fill="#D13438"/>
+  <text x="407" y="148" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130" text-anchor="middle">&gt;120% or bank empty</text>
+  <text x="407" y="158" font-family="Segoe UI, sans-serif" font-size="8" fill="#D13438" text-anchor="middle">Operations delayed</text>
+
+  <!-- Throttling behavior section -->
+  <rect x="20" y="175" width="460" height="115" fill="none" stroke="#0D5A4C" stroke-width="1" rx="4"/>
+  <text x="250" y="193" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#323130" text-anchor="middle">Throttling Behavior by Operation Type</text>
+
+  <!-- Interactive throttling -->
+  <rect x="30" y="205" width="210" height="75" fill="#D13438" opacity="0.05" rx="4"/>
+  <rect x="35" y="210" width="12" height="12" fill="#D13438"/>
+  <text x="52" y="220" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#D13438">Interactive Operations</text>
+  <text x="40" y="238" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• Requests delayed incrementally</text>
+  <text x="40" y="252" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• Delay increases with overuse</text>
+  <text x="40" y="266" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• Max delay: ~6 minutes at 200%</text>
+
+  <!-- Background throttling -->
+  <rect x="260" y="205" width="210" height="75" fill="#0078D4" opacity="0.05" rx="4"/>
+  <rect x="265" y="210" width="12" height="12" fill="#0078D4"/>
+  <text x="282" y="220" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#0078D4">Background Operations</text>
+  <text x="270" y="238" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• Jobs queued, not delayed</text>
+  <text x="270" y="252" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• Execution paused until capacity</text>
+  <text x="270" y="266" font-family="Segoe UI, sans-serif" font-size="9" fill="#323130">• May timeout after 24 hours</text>
+</svg>
